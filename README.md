@@ -10,7 +10,7 @@
 - 참조2: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html
 
 ### 3. aws cli 설정파일 예제
-- ~/.aws/config:
+- ~/.aws/config: main 계정 IAM에 iac_terraform 으로 등록한 예제
 <pre><code>
 [profile main]
 region          = ap-northeast-2
@@ -28,7 +28,7 @@ aws_access_key_id = (ACCESS_KEY_ID)
 aws_secret_access_key = (SECRET_ACCESS_KEY)
 </code></pre>
 
-- ~/.bashrc
+- ~/.bashrc: role_arn 환경변수를 terraform에서 참조하기 위해 사용
 <pre><code>
 export TF_VAR_role_arn="arn:aws:iam::(AWS계정ID):role/iac_terraform"
 </code></pre>
