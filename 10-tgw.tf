@@ -42,15 +42,35 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "us-vpc-attach" {
   )
 }
 
-output "account_id_sknet" {
+output "account_id_main" {
+  provider		= aws.main
+
+  value			= aws_ec2_transit_gateway.ko-tgw.owner_id
+}
+
+output "ko_tgw_id" {
+  provider		= aws.main
+
+  value			= aws_ec2_transit_gateway.ko-tgw.id
+}
+
+output "ko_tgw_region" {
+  value			= var.ko-region
+}
+
+output "account_id_sub" {
+  provider		= aws.sub
+
   value			= aws_ec2_transit_gateway.us-tgw.owner_id
 }
 
-output "use_tgw_id" {
+output "us_tgw_id" {
+  provider		= aws.sub
+
   value			= aws_ec2_transit_gateway.us-tgw.id
 }
 
-output "use_tgw_region" {
-  value			= "us-east-1"
+output "us_tgw_region" {
+  value			= var.us-region
 }
 
