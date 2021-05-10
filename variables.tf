@@ -4,7 +4,7 @@ variable "role_arn" {
 }
 
 variable "key_pair" {
-  default		= "i-sk-com.pem"
+  default		= "dc04258.pem"
 }
 
 variable "user" {
@@ -20,17 +20,17 @@ variable "ko-tags" {
 
 variable "us-tags" {
   default = {
-	Creator         = "sknet"
+	Creator         = "dc04258"
 	GlobalWAN       = "US-EAST"
   }
 }
 
 variable "ko-vpc" {
-  default		= "testbed-ko-vpc"
+  default		= "ko-vpc"
 }
 
 variable "us-vpc" {
-  default		= "sknet-us-vpc"
+  default		= "us-vpc"
 }
 
 variable "ko-vpc-cidr" {
@@ -60,23 +60,23 @@ variable "us-region" {
 }
 
 variable "ko-nsg" {
-  default		= "testbed-ko-nsg"
+  default		= "ko-nsg"
 }
 
 variable "us-nsg" {
-  default		= "sknet-us-nsg"
+  default		= "us-nsg"
 }
 
 variable "ko-igw" {
-  default		= "testbed-ko-igw"
+  default		= "ko-igw"
 }
 
 variable "us-igw" {
-  default		= "sknet-us-igw"
+  default		= "us-igw"
 }
 
 variable "ko-nic1" {
-  default		= "testbed-ko-nic1"
+  default		= "ko-nic1"
 }
 
 variable "ko-nic1-ip" {
@@ -84,11 +84,11 @@ variable "ko-nic1-ip" {
 }
 
 variable "ko-vm1" {
-  default		= "testbed-ko-vm1"
+  default		= "ko-vm1"
 }
 
 variable "us-nic1" {
-  default		= "sknet-us-nic1"
+  default		= "us-nic1"
 }
 
 variable "us-nic1-ip" {
@@ -96,46 +96,38 @@ variable "us-nic1-ip" {
 }
 
 variable "us-vm1" {
-  default		= "sknet-us-vm1"
+  default		= "us-vm1"
 }
 
 variable "ko-rtb" {
-  default		= "testbed-ko-rtb"
+  default		= "ko-rtb"
 }
 
 variable "us-rtb" {
-  default		= "sknet-us-rtb"
+  default		= "us-rtb"
 }
 
 variable "ko-tgw" {
-  default		= "testbed-ko-tgw"
+  default		= "ko-tgw"
 }
 
 variable "us-tgw" {
-  default		= "sknet-us-tgw"
+  default		= "us-tgw"
 }
 
 variable "ko-tgw-rtb" {
-  default		= "testbed-ko-tgw-rtb"
+  default		= "ko-tgw-rtb"
 }
 
 variable "us-tgw-rtb" {
-  default		= "sknet-us-tgw-rtb"
+  default		= "us-tgw-rtb"
 }
 
-variable "testbed-ko-cidr" {
-  default       	= "10.239.224.0/24"
-}
-
-variable "vpn-ko-cidr" {
+variable "us-vpn-cidr" {
   default       	= "10.100.100.1/32"
 }
 
-variable "sknet-us-cidr" {
-  default       	= "10.238.128.0/24"
-}
-
-variable "sknetvdi-cidr" {
+variable "vdi-cidr" {
   default		= "52.231.155.78/32"
 }
 

@@ -1,12 +1,12 @@
 provider "aws" {
-  alias		= "testbed"
+  alias		= "main"
   profile	= "testbed"
   region	= "ap-northeast-2"
   shared_credentials_file = "${pathexpand("~/.aws/credentials")}"
 }
 
 provider "aws" {
-  alias		= "sknet"
+  alias		= "sub"
   profile	= "sknet"
   region	= "us-east-1"
   assume_role {

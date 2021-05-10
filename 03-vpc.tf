@@ -1,5 +1,5 @@
 resource "aws_vpc" "ko-vpc" {
-  provider			= aws.testbed
+  provider			= aws.main
 
   cidr_block			= var.ko-vpc-cidr
 
@@ -10,7 +10,7 @@ resource "aws_vpc" "ko-vpc" {
 }
 
 resource "aws_vpc" "us-vpc" {
-  provider			= aws.sknet
+  provider			= aws.sub
 
   cidr_block			= var.us-vpc-cidr
 
