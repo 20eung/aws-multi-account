@@ -2,7 +2,7 @@ resource "aws_ec2_transit_gateway" "ko-tgw" {
   provider		= aws.main
 
   tags = merge (
-    {	Name		= "ko-tgw"
+    {	Name		= "${var.ko-tgw}"
     },	var.ko-tags
   )
 }
@@ -26,7 +26,7 @@ resource "aws_ec2_transit_gateway" "us-tgw" {
   auto_accept_shared_attachments	= "enable"
 
   tags = merge (
-    {	Name		= "us-tgw"
+    {	Name		= "${var.us-tgw}"
     },	var.us-tags
   )
 }
