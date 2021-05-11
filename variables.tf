@@ -7,8 +7,16 @@ variable "user" {
   default       	= "dc04258"
 }
 
+variable "ko-vpc" {
+  default       	= "ko-vpc"
+}
+
 variable "ko-vpc-cidr" {
   default       	= "10.239.224.0/24"
+}
+
+variable "us-vpc" {
+  default       	= "us-vpc"
 }
 
 variable "us-vpc-cidr" {
