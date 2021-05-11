@@ -23,6 +23,8 @@ resource "aws_ec2_transit_gateway_vpc_attachment" "ko-vpc-attach" {
 resource "aws_ec2_transit_gateway" "us-tgw" {
   provider		= aws.sub
 
+  auto_accept_shared_attachments	= "enable"
+
   tags = merge (
     {	Name		= "us-tgw"
     },	var.us-tags
